@@ -1,0 +1,29 @@
+<div class="mcs-modal">
+    <div class="mcs-message-block">
+        <label for="mcs_message" class="mcs-label">Сообщение:</label>
+        <textarea id="mcs_message" class="text_pole textarea_compact" rows="3" placeholder="Текст, который уйдёт во все отмеченные чаты"></textarea>
+        <label class="checkbox_label mcs-generate-label">
+            <input id="mcs_generate_reply" type="checkbox">
+            <span>Генерировать ответы моделей</span>
+        </label>
+    </div>
+    <div class="mcs-toolbar">
+        <input id="mcs_search" class="text_pole" type="text" placeholder="Поиск по персонажу / чату…">
+        <span id="mcs_selected_count">Выбрано: 0</span>
+    </div>
+    <div id="mcs_chat_list" class="mcs-chat-list"></div>
+    <div id="mcs_summary" class="mcs-summary" hidden></div>
+    <div id="mcs_progress_wrap" class="mcs-progress-wrap" hidden>
+        <div class="mcs-progress-bar"><div id="mcs_progress_fill" class="mcs-progress-fill"></div></div>
+        <span id="mcs_progress_text"></span>
+    </div>
+    <div class="mcs-footer">
+        <input id="mcs_select_all" type="button" class="menu_button" value="Выбрать все">
+        <input id="mcs_select_none" type="button" class="menu_button" value="Снять">
+        <span class="flex1"></span>
+        <input id="mcs_cancel_btn" type="button" class="menu_button" value="Отмена">
+        <input id="mcs_send_btn" type="button" class="menu_button mcs-primary" value="Отправить">
+        <input id="mcs_stop_btn" type="button" class="menu_button mcs-danger" value="Остановить" hidden>
+        <input id="mcs_close_btn" type="button" class="menu_button" value="Закрыть" hidden>
+    </div>
+</div>

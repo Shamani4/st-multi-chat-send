@@ -1,1 +1,182 @@
 /* Multi-Chat Send extension styles */
+
+/* ST class rules (e.g. .menu_button) override the UA [hidden] display:none — enforce it */
+.mcs-modal [hidden] {
+    display: none !important;
+}
+
+.mcs-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.mcs-modal .mcs-label {
+    font-weight: bold;
+}
+
+.mcs-modal #mcs_message {
+    width: 100%;
+    resize: vertical;
+}
+
+.mcs-generate-label {
+    margin: 4px 0 0;
+}
+
+.mcs-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mcs-toolbar #mcs_search {
+    flex: 1;
+    min-width: 0;
+}
+
+.mcs-chat-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 46vh;
+    overflow-y: auto;
+    border: 1px solid var(--SmartThemeBorderColor, #808080);
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.mcs-chat-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mcs-chat-row:hover {
+    background: color-mix(in srgb, var(--SmartThemeBodyColor, #333) 80%, var(--SmartThemeQuoteColor, #888));
+}
+
+.mcs-chat-row .mcs-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.mcs-chat-row .mcs-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mcs-chat-row .mcs-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mcs-chat-row .mcs-char-name {
+    font-weight: bold;
+}
+
+.mcs-chat-row .mcs-chat-name {
+    opacity: 0.85;
+}
+
+.mcs-chat-row .mcs-badge-current {
+    font-size: 0.8em;
+    border: 1px solid var(--SmartThemeBorderColor, #808080);
+    border-radius: 4px;
+    padding: 0 4px;
+    opacity: 0.8;
+}
+
+.mcs-chat-row .mcs-sub {
+    font-size: 0.85em;
+    opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mcs-chat-row .mcs-status {
+    flex-shrink: 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+    min-width: 3em;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.mcs-chat-row .mcs-status[data-status="ok"] {
+    color: var(--SmartThemeGreenColor, #4CAF50);
+}
+
+.mcs-chat-row .mcs-status[data-status="error"] {
+    color: var(--SmartThemeRedColor, #F44336);
+}
+
+.mcs-chat-row .mcs-status[data-status="running"] {
+    opacity: 0.7;
+}
+
+.mcs-summary {
+    border-top: 1px solid var(--SmartThemeBorderColor, #808080);
+    padding-top: 8px;
+}
+
+.mcs-summary .mcs-summary-line {
+    font-weight: bold;
+}
+
+.mcs-summary .mcs-error-line {
+    font-size: 0.9em;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+.mcs-progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mcs-progress-bar {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--SmartThemeBorderColor, #808080);
+    overflow: hidden;
+}
+
+.mcs-progress-fill {
+    height: 100%;
+    width: 0;
+    background: var(--SmartThemeQuoteColor, #888);
+    transition: width 0.3s;
+}
+
+.mcs-footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.mcs-footer .flex1 {
+    flex: 1;
+}
+
+.mcs-footer .mcs-primary {
+    border-color: var(--SmartThemeQuoteColor, #888);
+}
+
+.mcs-footer .mcs-danger {
+    border-color: var(--SmartThemeRedColor, #F44336);
+}
