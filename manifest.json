@@ -1,0 +1,14 @@
+{
+    "display_name": "Multi-Chat Send",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Shamani4",
+    "version": "0.1.0",
+    "homePage": "https://github.com/Shamani4/st-multi-chat-send",
+    "hooks": {
+        "activate": "init"
+    }
+}
